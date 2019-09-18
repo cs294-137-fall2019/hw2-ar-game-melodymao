@@ -29,7 +29,6 @@ public class GameState : MonoBehaviour
     {
         //set up fields
         tiles = GameObject.FindGameObjectsWithTag("Interactable");
-        tilesLeft = tiles.Length;
         Color orange = new Color(1.0f, 0.6f, 0.2f, 1.0f);
         colors = new Color[] {Color.red, Color.yellow, Color.green, Color.cyan, Color.blue, Color.magenta,
                               orange, Color.grey};
@@ -39,6 +38,8 @@ public class GameState : MonoBehaviour
 
     public void Reset()
     {
+        tilesLeft = tiles.Length;
+        
         cursor.SetActive(false);
         
         //generate a random order to traverse through and color tile array
